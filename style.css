@@ -23,5 +23,15 @@ h1{
     height: 500px;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    background-color: red;
+    border-bottom: 1px solid #888;
+    border-right: 1px solid #888;
+}
+
+.pixel {
+    border-top: 1px solid #888;
+    border-left: 1px solid #888;
+}
+
+.pixel.active {
+    background-color: black;
 }
