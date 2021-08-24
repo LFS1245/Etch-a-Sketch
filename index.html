@@ -10,16 +10,22 @@
   </head>
   <body>
     <h1>Etch a Sketch</h1>
-    <div class="sketch-container"></div>
-    <div class="menu-container">
-      <input
-        class="grid-size"
-        type="range"
-        min="1"
-        max="60"
-        step="1"
-        value="16"
-      />
+    <div class="main-container">
+      <div class="menu-container">
+        <button id="color-mode" class="menu-button">Color mode</button>
+        <button id="eraser-mode" class="menu-button">Eraser</button>
+        <button id="rainbow-mode" class="menu-button">Color mode</button>
+        <input
+          class="grid-size"
+          type="range"
+          min="1"
+          max="60"
+          step="1"
+          value="16"
+        />
+        <span class="grid-value">value</span>
+      </div>
+      <div class="sketch-container"></div>
     </div>
   </body>
 </html>
