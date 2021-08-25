@@ -1,5 +1,6 @@
 const container = document.querySelector(".sketch-container");
 const gridRange = document.querySelector(".grid-size");
+const sizeValue = document.querySelector(".grid-value");
 const grayButton = document.querySelector("#color-mode");
 const eraserButton = document.querySelector("#eraser-mode");
 const rainbowButton = document.querySelector("#rainbow-mode");
@@ -12,7 +13,7 @@ function drawGrid(value = 16) {
     container.innerHTML = "";
   }
   container.style.setProperty("grid-template-columns", `repeat(${value}, 1fr)`); //resize
-  for (let i = 0; i < value * value; i++) {
+  for (let i = 0; i < value ** 2; i++) {
     pixel = container.appendChild(document.createElement("div"));
     pixel.classList.add("pixel");
   }
@@ -20,6 +21,7 @@ function drawGrid(value = 16) {
 drawGrid();
 gridRange.addEventListener("change", (e) => {
   const value = gridRange.value;
+  sizeValue.textContent = `Grid size = ${gridRange.value} X ${gridRange.value}`;
   drawGrid(value);
 });
 
